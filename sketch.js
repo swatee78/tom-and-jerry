@@ -5,7 +5,7 @@ function preload() {
   catImage1 = loadAnimation("images/tomOne.png");
   catImage2 = loadAnimation("images/tomTwo.png", "images/tomThree.png");
   catImage3 = loadAnimation("images/tomFour.png")
-  mouseImage2 = loadAnimation("images/jerrytwo.png","images/jerrythree.png");
+  mouseImage2 = loadAnimation("images/jerryTwo.png","images/jerryThree.png");
   mouseImage1 = loadAnimation("images/jerryOne.png");
   mouseImage3 = loadAnimation("images/jerryFour.png");
 }
@@ -31,7 +31,7 @@ function draw() {
 
     //background(255);
     //Write condition here to evalute if tom and jerry collide
-if ((cat.x - mouse.x) < (cat.width - mouse.width)/2+130){
+if (cat.x - mouse.x < (cat.width - mouse.width)/2+130){
    cat.velocityX = 0;
    cat.addAnimation("tom3",catImage3);
    cat.changeAnimation("tom3");
@@ -40,7 +40,7 @@ if ((cat.x - mouse.x) < (cat.width - mouse.width)/2+130){
    mouse.changeAnimation("mouse3");
    }
     console.log(cat.width - mouse.width);
-    console.log(cat.x)
+    console.log(cat.x- mouse.x)
     keyPressed();
     drawSprites();
 }
